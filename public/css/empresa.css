@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    background-color: #00171F;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor h1 {
+    margin: 1%;
+}
+
+.contenedor i {
+    color: white;
+    font-size: 24px;
+}
+
+.sub-menu1-container {
+    background: #00171F;
+    height: 90.2%;
+    color: white;
+    width: 15%;
+    padding: 1%;
+    position: absolute;
+    display: none;
+}
+
+.sub-menu1-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sub-menu1-container ul li {
+    padding: 10px 0;
+}
+
+.sub-menu1-container ul li:hover {
+    background-color: #003459;
+    cursor: pointer;
+}
+
+.contenedor1 {
+    padding-top: 100%;
+    margin: 0%;
+    height: 40%;
+    background-color: #003459;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contenedor1 button {
+    background-color: #007EA7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20%;
+    color: white;
+    /* cursor: pointer; */
+}
+
+.contenedor1 button:hover {
+    background-color: #00A8E8;
+}
+
+.contenedor2 {
+    height: 50%;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+/* estilos Tabla */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #003459;
+    color: white;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #007EA7;
+}
+
+/* Boton registrar */
+.btnregister {
+    background-color: #00171F;
+    color: #ffffff;
+    border: none;
+    padding: 10px 40px;
+    /* border-radius: 5px; */
+}
+
+/* Estilos activos para los input cuando readonly está presente */
+.input-normal {
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+
+
+@media (max-width: 1250px) {
+    * {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .sub-menu1-container {
+        background: #00171F;
+        height: 93.1%;
+        color: white;
+        width: 50%;
+        padding: 5%;
+        position: absolute;
+        display: none;
+    }
+
+    .contenedor1 {
+        padding: 13%;
+    }
+
+
+}

@@ -1,0 +1,399 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    display: flex; /* Layout flex para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alineación vertical */
+    padding: 0 2.5vh; /* Espaciado horizontal */
+    background-color: #003459; /* Color de fondo */
+    z-index: 1; /* Asegura que el header esté por encima */
+    font-weight: 600;
+}
+
+header .navbar-brand {
+    height: 8vh; /* Tamaño del logo */
+}
+
+header h4 {
+    text-align: center; /* Alineación del texto */
+    font-size: 4vh; /* Tamaño de fuente */
+}
+
+header a {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color blanco */
+}
+
+/* NAVBAR */
+nav {
+    height: 10%; /* Altura de la barra de navegación */
+}
+
+/* MAPA */
+/* Contenedor para el mapa */
+#cont-mapa {
+    flex: 1; /* Permite que el contenedor del mapa ocupe todo el espacio disponible */
+    position: relative; /* Necesario para posicionar elementos absolutos dentro */
+}
+
+/* Estilos para el mapa */
+#map {
+    flex: 1; /* Permite que el mapa ocupe todo el espacio disponible */
+    height: 100%; /* Asegura que el mapa ocupe todo el espacio vertical del contenedor */
+    width: 100%; /* Asegura que el mapa ocupe todo el espacio horizontal del contenedor */
+}
+
+/* Posicionamiento del formulario */
+#cont-mapa form {
+    position: absolute; /* Hace que el formulario esté flotando sobre el mapa */
+    top: 10px; /* Posición desde la parte superior */
+    left: 10px; /* Posición desde la parte izquierda */
+    padding: 10px; /* Espacio interno */
+    z-index: 1000; /* Asegura que el formulario esté por encima del mapa */
+    width: 55%;
+}
+
+/* Estilos para los campos del formulario */
+#cont-mapa form input[type="text"] {
+    padding: 8px; /* Espacio interno para campos de texto */
+    border: 1px solid #ccc; /* Borde para campos de texto */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espaciado entre campos */
+    width: 100%; /* Ancho completo para los campos */
+}
+
+.leaflet-control-zoom {
+    display: none; /* Oculta controles de zoom */
+}
+
+/* CONTENEDORES */
+#cont-principal {
+    display: flex; /* Layout flex */
+    width: 100%;
+    height: 100vh;
+    padding-top: 4.5%; /* Espacio superior para el header */
+}
+
+/* Menú hamburguesa */
+#cont-crud {
+    background-color: #003459; /* Fondo del contenedor */
+    position: relative; /* Para posicionar elementos */
+    transition: width 0.3s ease; /* Transición para expansión/contracción */
+    overflow: hidden; /* Oculta el contenido cuando está colapsado */
+    width: 3%; /* Ancho por defecto cuando está colapsado */
+    padding: 15px;
+}
+
+/* Expandir el contenedor */
+#cont-crud.expanded {
+    width: 30%; /* Ancho cuando está expandido */
+}
+
+/* Menú toggle */
+.menu-toggle {
+    position: absolute; /* Para posicionarlo en el lugar correcto */
+    top: 15px; /* Desde la parte superior */
+    left: 10px; /* Desde la parte izquierda */
+    cursor: pointer; /* Indica que se puede hacer clic */
+    z-index: 2; /* Asegura visibilidad */
+}
+
+.menu-toggle .hamburger {
+    display: block; /* Asegura que las barras sean visibles */
+    width: 25px; /* Ancho de las barras */
+    height: 3px; /* Altura de las barras */
+    background: white; /* Color de las barras */
+    transition: transform 0.3s ease; /* Transición para la transformación */
+    margin: 4px 0; /* Espaciado entre barras */
+}
+
+/* Cambiar a "X" cuando está expandido */
+#cont-crud.expanded .menu-toggle .hamburger:first-child {
+    transform: rotate(45deg) translate(5px, 5px); /* Parte superior */
+}
+
+#cont-crud.expanded .menu-toggle .hamburger:nth-child(2) {
+    opacity: 0; /* Ocultar la barra del medio */
+}
+
+#cont-crud.expanded .menu-toggle .hamburger:last-child {
+    transform: rotate(-45deg) translate(5px, -5px); /* Parte inferior */
+}
+
+/* Contenido del menú */
+.menu-content {
+    display: none; /* Oculto por defecto */
+    flex-direction: column; /* Organización vertical */
+    justify-content: flex-start; /* Espacio al inicio */
+    transition: opacity 0.3s ease; /* Transición para mostrar/ocultar */
+}
+
+#cont-crud.expanded .menu-content {
+    display: flex; /* Mostrar cuando está expandido */
+}
+
+/* Otros estilos para el contenido */
+
+#cont-crud h1 {
+    color: white; 
+    font-size: 20px; 
+    font-family: Helvetica; 
+    font-weight: bold;
+    padding-top: 45px;
+}
+
+#cont-crud p {
+    color: white; 
+    font-size: 16px; 
+    font-family: Helvetica; 
+}
+
+#icono-suma {
+    color: green; 
+    border: 2px solid green; 
+    padding: 5px; 
+    border-radius: 5px; 
+    background-color: white; 
+    cursor: pointer; 
+    height: 30px;
+    /* margin-left: 8px; /* Evitar superposiciones con el ícono */
+    /* margin-top: 10px; Espacio para evitar superposiciones */
+    width: 10%;
+}
+
+/* Formularios y elementos relacionados */
+form {
+    max-width: 500px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    border-radius: 10px; 
+    background-color: #f9f9f9; 
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+}
+
+button {
+    background-color: #003459; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #005092;
+}
+
+input[type="text"], input[type="email"], input[type="password"], #empresa {
+    width: 100%; 
+    padding: 10px; 
+    border-radius: 5px; 
+    transition: border-color 0.3s; 
+}
+
+/* MODAL */
+/* Estilos para el modal */
+.modal-content {
+    background-color: #003459; /* Fondo azul oscuro */
+    color: white; /* Texto en blanco */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.modal-header {
+    border-bottom: 1px solid #cccccc; /* Línea divisoria */
+}
+
+.modal-title {
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+}
+
+.modal-body {
+    padding: 20px; /* Espaciado interno */
+}
+
+
+form div {
+    margin-bottom: 10px; /* Espaciado entre campos */
+}
+
+label {
+    font-weight: bold; /* Texto en negrita */
+    color: black;
+}
+
+input[type="text"],
+select {
+    width: 100%; /* Ancho total */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #cccccc; /* Borde suave */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333333; /* Texto gris oscuro */
+}
+
+input[type="submit"] {
+    background-color: #003459; /* Color de fondo (azul oscuro) */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+input[type="submit"]:hover {
+    background-color: #005092; /* Color de fondo al pasar por encima */
+}
+
+input[type="submit"]:active {
+    background-color: #001d40; /* Color de fondo al hacer clic */
+}
+
+select {
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Ajustes adicionales para mejor experiencia */
+.modal {
+    transition: opacity 0.3s ease; /* Transición suave para abrir/cerrar */
+}
+
+.close {
+    color: white; /* Color del icono de cierre */
+    font-size: 35px; /* Tamaño del icono de cierre */
+}
+
+
+/* Estilo para la sección con el listado de parkings */
+.menu-content {
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    height: 100%;
+    overflow-y: auto
+}
+
+/* Estilo para el encabezado y botones en la sección de parkings */
+.menu-content h3 {
+    font-size: 18px;
+}
+
+/* Estilo para cada elemento de parking en el listado */
+.parking-item {
+    margin-top: 10px; /* Espacio entre parkings */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Borde para separar parkings */
+    padding: 10px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para los botones de editar y eliminar */
+.parking-item button {
+    margin-right: 10px; /* Separación entre botones */
+}
+
+.parking-item .btn-warning {
+    color: #fff; /* Color de texto en botones de advertencia */
+    background-color: #f0ad4e; /* Color de fondo para el botón de advertencia */
+}
+
+.parking-item .btn-danger {
+    color: #fff; /* Color de texto para botón de peligro */
+    background-color: #d9534f; /* Color de fondo para el botón de peligro */
+}
+
+/* Botón de eliminar - color, tamaño y margen */
+.parking-item .btn-danger {
+    color: white; /* Texto blanco para contraste */
+    background-color: #d9534f; /* Rojo para indicar peligro */
+    border: none; /* Eliminar bordes */
+    border-radius: 5px; /* Bordes redondeados para apariencia moderna */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    cursor: pointer; /* Indicar que es un elemento clicable */
+    height: 40px;
+}
+
+/* Efectos al pasar el mouse */
+.parking-item .btn-danger:hover {
+    background-color: #c9302c; /* Cambio de color para hover (más oscuro) */
+}
+
+/* Efectos al hacer clic */
+.parking-item .btn-danger:active {
+    background-color: #ac2925; /* Cambio de color al hacer clic */
+}
+
+/* Margen entre botones */
+.parking-item button {
+    margin-right: 10px; /* Espaciado entre botones */
+}
+
+/* Estilo para formularios dentro de un item de parking */
+.parking-item form {
+    display: inline-block; /* Permite alinear el formulario y el botón inline */
+    background-color: #003459; /* Fondo del contenedor */
+    padding: 0;
+    margin: 0;
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Eliminar bordes */
+    color: white; /* Color del texto */
+}
+
+
+div.alert {
+    margin-top: 15px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }

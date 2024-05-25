@@ -1,0 +1,181 @@
+/* Estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+<<<<<<< HEAD
+=======
+    box-sizing: border-box;
+>>>>>>> 14daed7f2c0ff107553ecf3fd7ee78bf3a4c9c6a
+}
+/* Header */
+#header {
+    height: 65vh;
+    background-color: #007EA7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+#header h2 {
+    font-size: 5vw;
+    text-shadow: -1px -1px 0 #000, 4px -1px 0 #000, -1px 4px 0 #000, 4px 4px 0 #000;
+    font-weight: bolder;
+}
+
+/* Navbar */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Para asegurarte de que el navbar esté por encima de otros elementos */
+    transition: top 0.3s; /* Suavidad de la transición */
+}
+
+#navbar {
+    position: relative; /* La posición por defecto cuando no está fijado */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003459;
+    font-weight: 600;
+    transition: top 0.3s; /* Para suavizar el cambio de posición */
+}
+
+nav .navbar-brand {
+    height: 8vh;
+}
+
+nav h4 {
+    text-align: center;
+    font-size: 4vh;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Contenedor principal */
+#cont-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+/* Columnas */
+.column-2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elevado */
+}
+
+/* Imagen en la primera columna */
+.column-2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Formulario en la segunda columna */
+#formulario {
+    flex-direction: column;
+    justify-content: center; /* Alinea los elementos en el centro */
+    padding: 1rem;
+    background-color: white; /* Fondo blanco para el formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow-y: hidden; /* Evita el desplazamiento en el formulario */
+    height: 60vh; /* Misma altura que la columna de la imagen */
+    width: 100%;
+}
+
+/* Contenido del formulario */
+#cont-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: auto; /* Permite el desplazamiento si el contenido excede la altura */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura del formulario */
+    width: 100%;
+}
+
+#cont-form h1 {
+    font-size: 35px;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+}
+
+#cont-form p {
+    margin-bottom: 1rem;
+}
+
+#cont-form h1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+#formulario div {
+    margin-bottom: 1rem;
+}
+
+#formulario .form-label {
+    font-weight: 600;
+}
+
+#formulario .form-control {
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+#formulario button {
+    background-color: #007EA7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#formulario button:hover {
+    background-color: #005f87;
+}
+
+/* Footer */
+.custom-footer {
+    background-color: #343a40; 
+    padding: 20px 0;
+    text-align: center; /* Centra el contenido */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Distribuye uniformemente las columnas */
+}
+
+.footer-column {
+    flex: 1; /* Las columnas ocupan igualmente el espacio disponible */
+}
+
+.custom-footer p {
+    margin: 5px 0; /* Ajuste de espacio entre párrafos */
+    color: white;
+}
+
+.custom-footer h4 {
+    color: #fff; /* Color de los títulos */
+}

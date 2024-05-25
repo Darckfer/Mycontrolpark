@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: #001A2C;
+    /* Color de fondo */
+}
+
+
+/* navbar */
+
+/* Estilo para el nav y su contenido */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    /* Sombras sutiles */
+}
+
+nav li {
+    list-style: none;
+    padding: 0 15px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover {
+    color: gold;
+}
+
+nav img {
+    max-height: 70px;
+    object-fit: contain;
+    /* Asegura que el logo tenga un tamaño adecuado */
+}
+
+nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+} */
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    /* flex: 1; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.column p {
+    font-weight: bold;
+}
+
+#expirados,
+#activos,
+#nuevos {
+    border: 1px solid #ddd;
+    /* padding: 10px; */
+    /* height: 150px; */
+    /* Ajusta la altura según sea necesario */
+    overflow-y: auto;
+    /* Añade un scroll si el contenido excede la altura */
+}

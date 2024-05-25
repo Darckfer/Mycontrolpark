@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 90vh;
+    background-color: #003459;
+}
+
+.navbar {
+    height: 10vh;
+    background-color: #00171F;
+}
+
+.filtro {
+    width: 95%;
+    margin: 10vh 2.5% 0;
+    height: 10vh;
+    overflow: hidden !important;
+    display: block;
+}
+.after::after {
+    content: none !important;
+}
+
+.iconoFiltro {
+    width: 15%;
+    float: left;
+
+}
+
+.iconoFiltro span {
+    font-size: 4vh;
+    color: white;
+}
+
+.inputFiltro {
+    float: left;
+    width: 100%;
+    padding-left: 5%;
+    margin-top: 5%;
+}
+
+.inputFiltro input {
+    width: 85%;
+}
+
+.inputFiltro span {
+    margin: 0.25vh 0 0 0.5vh;
+    font-size: 4vh;
+    color: white;
+}
+
+.reservaCliente {
+    /* background-color: green; */
+    color: white;
+    height: 10vh;
+    margin-top: 5%;
+}
+
+.reservaCliente h3 {
+    margin-left: 10%;
+    width: 35%;
+    float: left;
+    padding-top: 4vh;
+}
+
+.reservaCliente button {
+    /* margin-left: 30%; */
+    width: 20%;
+    margin-top: 3.2vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: right;
+}
+
+.horasReservas {
+    width: 20%;
+    float: left;
+    margin-top: 4vh;
+}
+
+.reservas {
+    height: 75vh;
+    overflow: scroll;
+}
+/* .VIpgJd-ZVi9od-l4eHX-hSRGPd {
+    visibility: hidden;
+} */
+
+@media screen and (min-width: 800px) { /* Con esto lo ocultamos en la pc y se deja visible solo en mobile */
+    .mostrarenmobile{
+        display: none;
+    }
+}

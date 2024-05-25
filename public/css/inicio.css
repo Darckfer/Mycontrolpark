@@ -1,0 +1,225 @@
+/* Reinicio básico */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Estilos del body */
+body {
+    background-image: url('../img/OIG1.jpeg');
+    background-size: cover;
+    /* Hace que la imagen de fondo cubra todo el cuerpo */
+    background-position: center bottom;
+    /* Alinea la imagen en el centro */
+    color: #fff;
+    /* overflow: hidden; */
+    height: 100vh;
+}
+
+/* Estilo para el nav y su contenido */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 8px 20px;  */
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    height: 10vh;
+}
+
+#formulario {
+    height: 80vh;
+    padding: 15px;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border: 1px solid #e0cbbd;
+    /* Borde sutil */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin: 20px 30% 0;
+}
+
+/* Estilo para el logo y el resto de elementos */
+nav li {
+    list-style: none;
+    padding: 0 15px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover {
+    color: gold;
+}
+
+/* Asegura que el logo tenga tamaño adecuado */
+nav img {
+    max-height: 70px;
+    object-fit: contain;
+}
+
+/* Estilo para alinear el logo y los elementos */
+nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#FrmReserva {
+    height: 55vh;
+}
+
+/* Estilos para el contenedor del formulario */
+#cont-form {
+    /* margin-top: 20px;  */
+    height: 70vh;
+}
+
+.inputs {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.form-floating,
+.input-group {
+    margin-bottom: 1vh;
+    padding-right: 0.5vh;
+    /* color: black; */
+}
+
+
+/* Estilos para el título del formulario con línea divisoria usando pseudo-element */
+#cont-form h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    /* Necesario para usar pseudo-elements */
+}
+
+#cont-form h1::after {
+    content: '';
+    /* Pseudo-element vacío para crear la línea */
+    position: absolute;
+    left: 0;
+    /* Inicia la línea desde la izquierda */
+    right: 0;
+    /* Extiende la línea hasta la derecha */
+    bottom: -10px;
+    /* Ubicación de la línea */
+    height: 2px;
+    /* Grosor de la línea */
+    background-color: black;
+    /* Color de la línea */
+}
+
+/* Estilos para el contenido del formulario */
+#cont-form p {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    margin: 0;
+}
+
+/* Estilos para el formulario */
+#cont-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Estilos para grupos de campos */
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para cada campo individual */
+.form-field {
+    flex: 1;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Contenedor para el botón, debe usar display: flex para la alineación */
+#cont-form .button-group {
+    display: flex;
+    /* Asegura el uso de flexbox */
+    justify-content: flex-end;
+    /* Alinea el botón a la derecha */
+    margin-top: 20px;
+    /* Espaciado superior */
+}
+
+/* Estilos para el botón en el formulario */
+#cont-form button {
+    padding: 10px 20px;
+    /* Añade espaciado */
+    /* background-color: rgb(225, 157, 30); Color de fondo */
+    color: white;
+    /* Color de texto */
+    border: none;
+    /* Sin borde */
+    border-radius: 6px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor de mano al pasar */
+    transition: background-color 0.3s;
+    /* Transición para el hover */
+}
+
+/* Estilo de hover para el botón */
+/* #cont-form button:hover {
+    background-color: rgb(209, 149, 37); 
+} */
+
+/* BARRA DESPLAZAMIENTO */
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: white #00171F;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid black;
+}
